@@ -1,0 +1,31 @@
+@use 'variaveis';
+
+.hero {
+    background-image: url(../../dist/images/hero/spider-man-hero.jpeg);
+    height: 810px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 220px 135px;
+
+    &__title, &__subtitle {
+        margin-bottom: 24px;
+    }
+
+    &__button {
+        margin-left: 135px;
+        width: 200px;
+        height: 60px;
+        background-color: variaveis.$colorButton;
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: 2px 2px 2px variaveis.$textShadow;
+        cursor: pointer;
+
+        &:hover {
+            background-color: variaveis.$colorButtonHover;
+        }
+    }
+}

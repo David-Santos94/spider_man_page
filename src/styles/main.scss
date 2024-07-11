@@ -1,3 +1,55 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
 body {
-    background-color: #1c1c1c;
+    background-color: variaveis.$colorBackground;
+}
+
+@mixin text1($fontSize: 1em) {
+    font-size: $fontSize;
+    color: variaveis.$colorText;
+}
+
+@mixin text2($fontSize: 1em) {
+    font-size: $fontSize;
+    color: variaveis.$colorText2;
+}
+
+.textFirst {
+    @include text1;
+}
+
+.textSecond {
+    @include text2;
+}
+
+.text--title1 {
+    @include text1(2em);
+    text-shadow: 5px 5px 2px variaveis.$textShadow;
+}
+
+.text--title2 {
+    @include text1(1.5em)
+}
+
+.textLink {
+    @include text2;
+    text-decoration: none;
+    cursor: pointer;
+
+    &--active {
+        color: variaveis.$colorTextActive;
+        text-decoration-line: underline;
+        text-decoration-color: variaveis.$color_TextActive;
+    }
 }

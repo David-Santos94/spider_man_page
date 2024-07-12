@@ -1,6 +1,7 @@
 @use 'variaveis';
 @use 'header';
 @use 'hero';
+@use 'allmovies';
 
 
 * {
@@ -39,7 +40,8 @@ body {
 }
 
 .text--title2 {
-    @include text1(1.5em)
+    @include text1(1.5em);
+    margin: 25px 0;
 }
 
 .textLink {

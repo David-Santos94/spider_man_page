@@ -1,0 +1,34 @@
+@use 'variaveis';
+
+.gallery {
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+
+        &__carrousel {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 80vh;
+
+            &__slide {
+                display: none;
+                width: 100%;
+                height: 100%;
+                
+                &--show {
+                    display: block;
+                }
+                
+                &__image {
+                    width: 100%;
+                    height: 100%;
+                }
+                
+            }
+        }
+    }
+}

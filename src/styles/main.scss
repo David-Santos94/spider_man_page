@@ -46,6 +46,11 @@ body {
     margin: 25px 0;
 }
 
+.text--title3 {
+    @include text2(1.1em);
+    margin: 25px 0;
+}
+
 .textLink {
     @include text2;
     text-decoration: none;

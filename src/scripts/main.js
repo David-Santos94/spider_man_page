@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     //declarações sessão de posters
     const poster = document.querySelectorAll('[data-poster]');
-    const card = document.querySelector('[data-card]');
-    const closeCard = document.querySelector('[data-btnClose]');
+    const card = document.querySelectorAll('[data-card]');
+    const closeCard = document.querySelectorAll('[data-btnClose]');
+    const container = document.querySelector('[data-allMovies');
 
     
     //declarações galeria de imagens
@@ -23,15 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < poster.length; i++){
         poster[i].addEventListener('click', function() {
             positionClick = window.scrollY - window.innerHeight;
-            card.style.top = positionClick+"px";
-            card.classList.add('allMovies__cardMovie--show');
+            card[i].style.top = positionClick+"px";
+            card[i].classList.add('allMovies__cardMovie--show');
+            container.style.opacity = "0.1";
+        })
+
+        closeCard[i].addEventListener('click', function () {
+            card[i].classList.remove('allMovies__cardMovie--show');
+            container.style.opacity = "1";
         })
     }
 
-    closeCard.addEventListener('click', function () {
-        card.classList.remove('allMovies__cardMovie--show');
-        console.log("click");
-    })
 
 
     //sessão fotos personagens

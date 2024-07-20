@@ -1,16 +1,38 @@
 document.addEventListener('DOMContentLoaded', function() {
+    //declarações sessão de posters
+    const poster = document.querySelectorAll('[data-poster]');
+    const card = document.querySelector('[data-card]');
+    const closeCard = document.querySelector('[data-btnClose]');
+
+    
     //declarações galeria de imagens
     const gallerySection = document.querySelector('.gallery');
     const positionSection = gallerySection.getBoundingClientRect();
     const slides = document.querySelectorAll('[data-slide]');
     let count = 0;
-    let delay = 5000;
+    let delay = 3000;
     const positionNow = window.scrollY;
     const calcPosition = positionSection.top + positionNow;
     
 
     //declarações sessão de fotos personagens
     const img = document.querySelectorAll('[data-img]');
+
+
+    //sessão de posters
+    for (let i = 0; i < poster.length; i++){
+        poster[i].addEventListener('click', function() {
+            positionClick = window.scrollY - window.innerHeight;
+            card.style.top = positionClick+"px";
+            card.classList.add('allMovies__cardMovie--show');
+        })
+    }
+
+    closeCard.addEventListener('click', function () {
+        card.classList.remove('allMovies__cardMovie--show');
+        console.log("click");
+    })
+
 
     //sessão fotos personagens
     for (let i = 0; i < img.length; i++){

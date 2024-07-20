@@ -36,6 +36,7 @@
             &__btnClose {
                 margin-right: 4px;
                 height: 24px;
+                cursor: pointer;
             }
 
         }
@@ -85,6 +86,7 @@
             max-width: 1440px;
 
             &__item {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 max-width: 480px;
@@ -92,6 +94,17 @@
 
                 &__img {
                     width: 60%;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+
+                &__more {
+                    position: absolute;
+                    top: 45%;
+                    z-index: -1;
                 }
             }
         }

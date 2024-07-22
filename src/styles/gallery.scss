@@ -8,6 +8,12 @@
         align-items: center;
         height: 100vh;
 
+        &__title{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
         &__carrousel {
             display: flex;
             justify-content: center;

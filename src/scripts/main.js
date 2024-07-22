@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //sessão de posters
     for (let i = 0; i < poster.length; i++){
         poster[i].addEventListener('click', function() {
-            positionClick = window.scrollY - window.innerHeight;
-            card[i].style.top = positionClick+"px";
             card[i].classList.add('allMovies__cardMovie--show');
+            positionClick = window.scrollY - card[i].clientHeight;
+            card[i].style.top = positionClick+"px";
             container.style.opacity = "0.1";
         })
 
@@ -53,10 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //sessão galeria de imagens
     function startCarrousel() {
         const position = window.scrollY;
-        console.log(calcPosition, position);
         if (position > parseInt(calcPosition)) {
             carrousel();
-            console.log("next");
         }
     };
     

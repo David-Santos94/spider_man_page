@@ -1,8 +1,11 @@
 @use 'variaveis';
 
 .header {
-    background-color: variaveis.$colorBackground;
+    position: absolute;
+    width: 100%;
     height: 68px;
+    background-color: variaveis.$colorBackgroundHeader;
+    box-shadow: 2px 2px 2px variaveis.$textShadow;
 
     &__container {
         width: 100%;

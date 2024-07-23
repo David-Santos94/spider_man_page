@@ -1,17 +1,39 @@
 @use 'variaveis';
 
 .hero {
-    background-image: url(../../dist/images/hero/spider-man-hero.jpeg);
-    height: 810px;
+    background-image: url(/dist/images/hero/spider-man-hero.png);
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: left;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 220px 135px;
+    justify-content: center;
+    padding-left: 40px;
+    @media (max-width: 768px) {
+        background-image: url(/dist/images/hero/spider-man-hero-tablet.png);
+        padding: 80px 40px;
+        justify-content: end;
+        align-items: center;
+        text-align: center;
+    }
+    @media (max-width: 480px) {
+        background-position: right;
+        padding: 40px 20px;
+        align-items: end;
+        text-align: end;
+    }
 
     &__title, &__subtitle {
+        width: 40%;
         margin-bottom: 24px;
+        @media (max-width: 768px) {
+            width: 70%;
+        }
+        @media (max-width: 480px) {
+            width: 80%;
+        }
+
     }
 
     &__button {
@@ -23,6 +45,10 @@
         border-style: none;
         box-shadow: 2px 2px 2px variaveis.$textShadow;
         cursor: pointer;
+        transition: 1s ease;
+        @media (max-width: 768px) {
+            margin: 0;
+        }
 
         &:hover {
             background-color: variaveis.$colorButtonHover;

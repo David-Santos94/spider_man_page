@@ -12,6 +12,16 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+    @media (max-width: 480px) {
+        font-size: 20px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -64,6 +74,7 @@ body {
     @include text2;
     text-decoration: none;
     cursor: pointer;
+    transition: .5s ease;
 
     &:hover {
         color: variaveis.$colorTextActive;
@@ -90,16 +101,44 @@ footer {
     width: 100%;
     margin-bottom: 80px;
 
+    @media (max-width: 480px) {
+        &__text, &__contact {
+            font-size: 0.6em;
+        }
+
+    }
 
     &__contact {
         text-align: center;
+        @media (max-width: 480px) {
+            &__text480 {
+                font-size: 0.6em;
+            }
+        }
     }
 
     &__links {
+        display: flex;
 
-        &__logo {
-            margin: 0 16px;
-            width: 20%;
+        &__href {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            max-width: 90px;
+            @media (max-width: 480px) {
+                max-width: 50px;
+            }
+
+            &__logo {
+                width: 100%;
+                @media (max-width: 768px) {
+                    width: 60%;
+                }
+                @media (max-width: 480px) {
+                    width: 90%;
+                }
+            }
         }
+
     }
     }

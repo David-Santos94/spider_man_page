@@ -14,6 +14,7 @@
         justify-content: space-between;
         align-items: center;
         
+        
         &__logo {
             display: flex;
             justify-content: center;
@@ -25,14 +26,44 @@
             }
         }
 
+        &__responsiveMenu {
+            visibility: hidden;
+            @media (max-width: 768px) {
+                visibility: visible;
+                margin-right: 36px;
+            }
+        }
+
         &__links-menu {
             width: 50%;
+            @media (max-width: 768px) {
+                visibility: hidden;
+                position: absolute;
+                width: 100%;
+                top: 68px;
+                display: flex;
+                justify-content: end;
+
+                &--show {
+                    visibility: visible;
+                }
+            }
 
             &__ul {
                 list-style: none;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: variaveis.$colorBackgroundHeader;
+
+                    &__item {
+                        margin: 10px;
+                    }
+                }
             }
         }
     }

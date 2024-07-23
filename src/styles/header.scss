@@ -28,7 +28,7 @@
 
         &__responsiveMenu {
             visibility: hidden;
-            @media (max-width: 768px) {
+            @media (max-width: 1023px) {
                 visibility: visible;
                 margin-right: 36px;
             }
@@ -36,7 +36,7 @@
 
         &__links-menu {
             width: 50%;
-            @media (max-width: 768px) {
+            @media (max-width: 1023px) {
                 visibility: hidden;
                 position: absolute;
                 width: 100%;
@@ -55,7 +55,7 @@
                 flex-direction: row;
                 justify-content: space-evenly;
 
-                @media (max-width: 768px) {
+                @media (max-width: 1023px) {
                     flex-direction: column;
                     align-items: center;
                     background-color: variaveis.$colorBackgroundHeader;

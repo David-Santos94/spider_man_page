@@ -102,10 +102,10 @@
             grid-template-columns: 1fr 1fr 1fr;
             row-gap: 48px;
             max-width: 1440px;
-            @media (max-width: 768px) {
+            @media (max-width: 1023px) {
                 grid-template-columns: 1fr 1fr;
             }
-            @media (max-width: 480px) {
+            @media (max-width: 767px) {
                 grid-template-columns: 1fr;
             }
 
@@ -115,7 +115,7 @@
                 justify-content: center;
                 max-width: 480px;
                 max-height: 720px;
-                @media (max-width: 768px){
+                @media (max-width: 1023px){
                     flex-direction: column;
                     align-items: center;
                 }
@@ -124,10 +124,10 @@
                 &__img {
                     width: 60%;
                     cursor: pointer;
-                    @media (max-width: 768px){
+                    @media (max-width: 1023px){
                         width: 70%;
                     }
-                    @media (max-width: 480px) {
+                    @media (max-width: 767px) {
                         width: 80%;
                     }
 
@@ -140,7 +140,7 @@
                     position: absolute;
                     top: 45%;
                     z-index: -1;
-                    @media (max-width: 768px){
+                    @media (max-width: 1024px){
                         position: relative;
                         top: 0;
                         z-index: 0;
@@ -153,7 +153,7 @@
                         box-shadow: 2px 2px 2px variaveis.$textShadow;
                         text-align: center;
                     }
-                    @media (max-width: 480px) {
+                    @media (max-width: 767px) {
                         width: 80%;
                     }
                 }
